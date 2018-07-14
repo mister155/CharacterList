@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using Testing.Droid.Services;
-using Testing.Services.Interfaces;
+using CharacterList.Android.Services;
+using CharacterList.Services.Interfaces;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FileHelper))]
-namespace Testing.Droid.Services
+namespace CharacterList.Android.Services
 {
     public class FileHelper : IFileHelper
     {

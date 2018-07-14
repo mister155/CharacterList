@@ -8,6 +8,6 @@ namespace CharacterList.Data
 {
     public class Properties
     {
-        public static IDictionary<string, object> AppProperties = MediaTypeNames.Application.Current.Properties;
+        public static IDictionary<string, object> AppProperties = Application.Current.Properties;
     }
 }
