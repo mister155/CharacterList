@@ -1,9 +1,7 @@
-﻿using System;
+﻿using CharacterList.Model.Sqlite;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
-using CharacterList.Model.Sqlite;
 
 namespace CharacterList.ViewModels
 {
@@ -37,7 +35,7 @@ namespace CharacterList.ViewModels
 
         private async Task Init()
         {
-            var classes = await App.LocalDB.GetItems<Class>();
+            var classes = await App.LocalDb.GetItems<Class>();
             foreach (var c in classes)
             {
                 await Task.Delay(1000);

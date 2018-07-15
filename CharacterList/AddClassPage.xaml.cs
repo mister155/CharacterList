@@ -17,16 +17,16 @@ namespace CharacterList
         {
             if (entryName == null || string.IsNullOrWhiteSpace(entryName.Text))
             {
-                await DisplayAlert("Błąd", "Nie wszystkie pola zostały wypełnione", "OK");
+                await DisplayAlert("Error", "Character needs a name", "OK");
                 return;
             }
 
             var className = entryName.Text;
 
-            var newClass = new Class() { Name = className };
+            var newClass = new Class { Name = className };
 
-            await App.LocalDB.SaveItem(newClass);
-            await DisplayAlert("Sukces", "Dane zostały zapisane", "OK");
+            await App.LocalDb.SaveItem(newClass);
+            await DisplayAlert("Success", "Data has been saved", "OK");
             await Navigation.PopAsync();
         }
     }

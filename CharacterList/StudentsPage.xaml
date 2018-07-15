@@ -6,11 +6,11 @@
         <StackLayout>
             <Label Text="Students"
                 HorizontalOptions="CenterAndExpand" Margin="8" />
-            <Button Text="Add new student" Clicked="Button_Clicked" Margin="16" />
-            <ListView x:Name="lvItems" >
+            <Button Text="Add new item" Clicked="Button_Clicked" Margin="16" />
+            <ListView x:Name="LvItems" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding LastName}" Detail="{Binding AlbumNumber}" TextColor="#3C3C3C"/>
+                        <TextCell Text="{Binding ItemName}" Detail="{Binding ItemType}" TextColor="#3C3C3C"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

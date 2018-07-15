@@ -2,6 +2,6 @@
 {
     public interface ISqliteModel
     {
-        int ID { get; set; }
+        int Id { get; set; }
     }
 }

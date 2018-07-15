@@ -5,45 +5,45 @@ using System.Threading.Tasks;
 
 namespace CharacterList.Data
 {
-    public class LocalDB
+    public class LocalDb
     {
-        readonly SQLiteAsyncConnection database;
+        readonly SQLiteAsyncConnection _database;
 
-        public LocalDB(string dbPath)
+        public LocalDb(string dbPath)
         {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Student>().Wait();
-            database.CreateTableAsync<Class>().Wait();
+            _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Item>().Wait();
+            _database.CreateTableAsync<Class>().Wait();
         }
 
         public async Task<List<T>> GetItems<T>() where T : class, new()
         {
-            return await database.Table<T>().ToListAsync();
+            return await _database.Table<T>().ToListAsync();
         }
 
-        public async Task<List<Student>> GetStudentsByClassID(int id)
+        public async Task<List<Item>> GetStudentsByClassId(int id)
         {
-            return await database.Table<Student>().Where(x => x.ClassID == id).ToListAsync();
+            return await _database.Table<Item>().Where(x => x.CharacterId == id).ToListAsync();
         }
 
         public async Task<T> GetItemByID<T>(int id) where T : class, ISqliteModel, new()
         {
-            return await database.Table<T>().Where(x => x.ID == id).FirstOrDefaultAsync();
+            return await _database.Table<T>().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<int> SaveItem<T>(T item)
         {
-            var result = await database.UpdateAsync(item);
+            var result = await _database.UpdateAsync(item);
 
             if (result == 0)
-                result = await database.InsertAsync(item);
+                result = await _database.InsertAsync(item);
 
             return result;
         }
 
         public async Task<int> DeleteItem<T>(T item)
         {
-            return await database.DeleteAsync(item);
+            return await _database.DeleteAsync(item);
         }
     }
 }

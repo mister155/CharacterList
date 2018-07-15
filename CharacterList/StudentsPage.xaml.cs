@@ -22,20 +22,20 @@ namespace CharacterList
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            lvItems.ItemsSource = await App.LocalDB.GetStudentsByClassID(_class.ID);
-            lvItems.ItemTapped -= LvItems_ItemTapped;
-            lvItems.ItemTapped += LvItems_ItemTapped;
+            LvItems.ItemsSource = await App.LocalDb.GetStudentsByClassId(_class.Id);
+            LvItems.ItemTapped -= LvItems_ItemTapped;
+            LvItems.ItemTapped += LvItems_ItemTapped;
         }
 
         private async void LvItems_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var student = (Student)e.Item;
-            await Navigation.PushAsync(new EditStudentPage(student));
+            var student = (Item)e.Item;
+            await Navigation.PushAsync(new EditItemPage(student));
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddStudentPage(_class));
+            await Navigation.PushAsync(new AddItemPage(_class));
         }
     }
 }

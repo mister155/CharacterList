@@ -20,9 +20,9 @@ namespace CharacterList
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            lvItems.ItemsSource = await App.LocalDB.GetItems<Class>();
-            lvItems.ItemTapped -= LvItems_ItemTapped;
-            lvItems.ItemTapped += LvItems_ItemTapped;
+            LvItems.ItemsSource = await App.LocalDb.GetItems<Class>();
+            LvItems.ItemTapped -= LvItems_ItemTapped;
+            LvItems.ItemTapped += LvItems_ItemTapped;
         }
 
         private async void LvItems_ItemTapped(object sender, ItemTappedEventArgs e)

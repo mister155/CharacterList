@@ -10,20 +10,20 @@ namespace CharacterList
 {
 	public partial class App : Application
 	{
-        private static LocalDB localDB;
+        private static LocalDb _localDb;
 
-        public static LocalDB LocalDB
+        public static LocalDb LocalDb
         {
             get
             {
-                if (localDB == null)
+                if (_localDb == null)
                 {
                     var fileHelper = DependencyService.Get<IFileHelper>();
                     var filename = fileHelper.GetLocalFilePath("app.db3");
-                    localDB = new LocalDB(filename);
+                    _localDb = new LocalDb(filename);
                 }
 
-                return localDB;
+                return _localDb;
             }
         }
 
