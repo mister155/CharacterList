@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CharacterList.Views.CharactersPage"
+             x:Class="CharacterList.Views.CharactersListPage"
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding Commander.Command1}"
+            <Label Text="Character List"
                 HorizontalOptions="CenterAndExpand" />
             <ListView ItemsSource="{Binding Characters}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" Detail="{Binding Id}" />
+                        <TextCell Text="{Binding Name}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

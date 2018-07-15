@@ -28,7 +28,7 @@ namespace CharacterList.Data
 
         public async Task<T> GetItemById<T>(int id) where T : class, ISqliteModel, new()
         {
-            return await _database.Table<T>().Where(x => x.Id == id).FirstOrDefaultAsync();
+            return await _database.Table<T>().Where(x => x.ID == id).FirstOrDefaultAsync();
         }
 
         public async Task<int> SaveItem<T>(T item)

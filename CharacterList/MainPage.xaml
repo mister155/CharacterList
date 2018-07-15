@@ -19,11 +19,6 @@
             Clicked="btnProperties_Clicked_1"
             ContentLayout="Left"
          />
-
-            <Button
-            Text="Share shit"
-            Clicked="Button_Clicked_3"
-         />
         </StackLayout>
     </ScrollView>
 </ContentPage>

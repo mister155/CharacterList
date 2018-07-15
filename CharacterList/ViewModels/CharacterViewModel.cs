@@ -6,7 +6,7 @@ namespace CharacterList.ViewModels
 {
     public class CharacterViewModel : BaseViewModel
     {
-        private ObservableCollection<Character> Characters { get;}
+        public ObservableCollection<Character> Characters { get;}
 
         private string _title;
 

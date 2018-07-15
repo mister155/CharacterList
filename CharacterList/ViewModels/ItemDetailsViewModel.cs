@@ -59,12 +59,12 @@ namespace CharacterList.ViewModels
 
         public string Description
         {
-            get => _specialTraits;
+            get => _description;
             set
             {
-                if (_specialTraits != value)
+                if (_description != value)
                 {
-                    _specialTraits = value;
+                    _description = value;
                     RaisePropertyChanged(nameof(Description));
                 }
             }
@@ -92,7 +92,7 @@ namespace CharacterList.ViewModels
 
             if (s == "UPDATE")
             {
-                item.Id = _itemId;
+                item.ID = _itemId;
             }
 
             await App.LocalDb.SaveItem(item);

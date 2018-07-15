@@ -5,7 +5,7 @@
     <Application.Resources>
 
         <ResourceDictionary>
-            <Color x:Key="PrimaryColor">#BBBBFF</Color>
+            <Color x:Key="PrimaryColor">#6200EE</Color>
 
             <Style x:Key="TestButtonStyle" TargetType="Button">
                 <Setter Property="Margin" Value="0, 16" />

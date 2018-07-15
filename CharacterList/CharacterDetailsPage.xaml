@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CharacterList.CharacterDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Character Details"
+                HorizontalOptions="CenterAndExpand" />
+             <TableView>
+                 <TableSection>
+                     <TextCell x:Name="CharacterName" Text="Name" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="PlaceOfBirth" Text="Place of birth" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="DateOfBirth" Text="Date of birth" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="Faction" Text="Faction" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="Race" Text="Race" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="MagicType" Text="Magic Type" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="SoulColor" Text="Soul Colr" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="Height" Text="Height" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="HairColor" Text="Hair color" TextColor="#3C3C3C"/>
+                     <TextCell x:Name="EyesColor" Text="Eyes color" TextColor="#3C3C3C"/>
+                </TableSection>
+             </TableView>
+            <Button Text="Items" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

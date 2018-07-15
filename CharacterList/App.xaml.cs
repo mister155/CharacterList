@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CharacterList.Data;
+﻿using CharacterList.Data;
 using CharacterList.Services.Interfaces;
 using Xamarin.Forms;
 
 namespace CharacterList
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
         private static LocalDb _localDb;
 

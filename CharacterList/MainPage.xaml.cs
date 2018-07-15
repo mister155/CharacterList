@@ -1,6 +1,4 @@
-﻿using Plugin.Connectivity;
-using Plugin.Share;
-using System;
+﻿using System;
 using Xamarin.Forms;
 
 namespace CharacterList
@@ -19,27 +17,7 @@ namespace CharacterList
 
         private async void btnProperties_Clicked_1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.CharactersPage());
-        }
-
-        private void Button_Clicked_3(object sender, EventArgs e)
-        {
-            if (!CrossConnectivity.IsSupported)
-                return;
-
-            if (CrossConnectivity.Current.IsConnected)
-            {
-                var types = CrossConnectivity.Current.ConnectionTypes;
-            }
-
-            if (!CrossShare.IsSupported)
-                return;
-
-            CrossShare.Current.Share(new Plugin.Share.Abstractions.ShareMessage()
-            {
-                Title = "Przepis na mięso",
-                Text = "Zesraj sie do wiadeła"
-            });
+            await Navigation.PushAsync(new Views.CharactersListPage());
         }
     }
 }

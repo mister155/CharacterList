@@ -8,10 +8,10 @@ namespace CharacterList
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AddItemPage : ContentPage
 	{
-        private readonly Character _class;
-		public AddItemPage(Character selectedClass)
+        private readonly Character _character;
+		public AddItemPage(Character selectedCharacter)
 		{
-		    _class = selectedClass;
+		    _character = selectedCharacter;
 			InitializeComponent ();
 		}
 
@@ -34,7 +34,7 @@ namespace CharacterList
                 ItemType = itemType,
                 SpecialTraits = specialTraits,
                 Description = descritpion,
-                CharacterId= _class.Id
+                CharacterId= _character.ID
             };
 
             await App.LocalDb.SaveItem(newStudent);

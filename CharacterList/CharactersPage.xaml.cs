@@ -24,7 +24,7 @@ namespace CharacterList
         private async void LvItems_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var selectedClass = (Character)e.Item;
-            await Navigation.PushAsync(new ItemsPage(selectedClass));
+            await Navigation.PushAsync(new CharacterDetailsPage(selectedClass));
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
