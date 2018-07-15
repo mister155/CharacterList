@@ -29,7 +29,7 @@ namespace CharacterList
 
 	    private async void Button_Clicked(object sender, EventArgs e)
 	    {
-	        await Navigation.PushAsync(new AddItemPage(_character));
+	        await Navigation.PushAsync(new ItemsPage(_character));
 	    }
     }
 }
