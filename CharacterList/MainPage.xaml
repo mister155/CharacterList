@@ -9,7 +9,7 @@
             <Image Source="logo.jpg" Aspect="AspectFit"/>
 
             <Button
-            Text="Check and characters"
+            Text="Check and add characters"
             Clicked="Button_Clicked"
             ContentLayout="Left"
          />
