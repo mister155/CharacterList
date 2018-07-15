@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:CharacterList.Behavior;assembly=CharacterList"
+             x:Class="CharacterList.AddCharacterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Adding new character"
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="EntryName" Placeholder="Character name" />
+            <Entry x:Name="EntryBirthPlace" Placeholder="Place of birth" />
+            <Entry x:Name="EntryFaction" Placeholder="Facton" />
+            <Entry x:Name="EntryRace" Placeholder="Race" />
+            <Entry x:Name="EntryMagicType" Placeholder="Magic Type" />
+            <Entry x:Name="EntrySoulColor" Placeholder="Soul Color" />
+            <Entry x:Name="EntryHeight" Placeholder="Height [Cm]" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <behavior:NumericValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="EntryHairColor" Placeholder="Hair color" />
+            <Entry x:Name="EntryEyesColor" Placeholder="Eyes colors" />
+            <Label Text="  Date of birth:" />
+            <DatePicker x:Name="EntryBirthDate"/>
+            <Button Text="Save" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

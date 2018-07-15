@@ -13,7 +13,7 @@ namespace CharacterList.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Item>().Wait();
-            _database.CreateTableAsync<Class>().Wait();
+            _database.CreateTableAsync<Character>().Wait();
         }
 
         public async Task<List<T>> GetItems<T>() where T : class, new()
@@ -21,12 +21,12 @@ namespace CharacterList.Data
             return await _database.Table<T>().ToListAsync();
         }
 
-        public async Task<List<Item>> GetStudentsByClassId(int id)
+        public async Task<List<Item>> GetItemsByClassId(int id)
         {
             return await _database.Table<Item>().Where(x => x.CharacterId == id).ToListAsync();
         }
 
-        public async Task<T> GetItemByID<T>(int id) where T : class, ISqliteModel, new()
+        public async Task<T> GetItemById<T>(int id) where T : class, ISqliteModel, new()
         {
             return await _database.Table<T>().Where(x => x.Id == id).FirstOrDefaultAsync();
         }

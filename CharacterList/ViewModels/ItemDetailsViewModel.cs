@@ -104,7 +104,7 @@ namespace CharacterList.ViewModels
         private async void Init()
         {
             await Task.Delay(1000);
-            var student = await App.LocalDb.GetItemByID<Item>(_itemId);
+            var student = await App.LocalDb.GetItemById<Item>(_itemId);
             ItemName = student.ItemName;
             ItemType = student.ItemType;
             SpecialTraits = student.SpecialTraits;

@@ -7,10 +7,17 @@
             <Label Text="Adding new item"
                 HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="EntryItemName" Placeholder="Item name" />
-            <Entry x:Name="EntryItemType" Placeholder="Item type" />
+            <Picker x:Name="EntryItemType" Title="Item Type">
+                <Picker.Items>
+                    <x:String>Weapon</x:String>
+                    <x:String>Armor</x:String>
+                    <x:String>Item</x:String>
+                    <x:String>Other</x:String>
+                </Picker.Items>
+            </Picker>
             <Entry x:Name="EntrySpecialTraits" Placeholder="Special traits" />
             <Entry x:Name="EntryDescription" Placeholder="Description" />
-            <Button Text="Zapisz" Clicked="Button_Clicked" />
+            <Button Text="Save" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

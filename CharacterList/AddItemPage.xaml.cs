@@ -8,10 +8,10 @@ namespace CharacterList
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AddItemPage : ContentPage
 	{
-        private Class _class;
-		public AddItemPage(Class selectedClass)
+        private readonly Character _class;
+		public AddItemPage(Character selectedClass)
 		{
-            _class = selectedClass;
+		    _class = selectedClass;
 			InitializeComponent ();
 		}
 
@@ -23,10 +23,10 @@ namespace CharacterList
                 return;
             }
 
-            var itemName = EntryItemName.Text;
-            var itemType = EntryItemType.Text;
-            var specialTraits = EntrySpecialTraits.Text;
-            var descritpion = EntryDescription.Text;
+            var itemName = EntryItemName?.Text;
+            var itemType = EntryItemType.SelectedItem?.ToString();
+            var specialTraits = EntrySpecialTraits?.Text;
+            var descritpion = EntryDescription?.Text;
 
             var newStudent = new Item
             {

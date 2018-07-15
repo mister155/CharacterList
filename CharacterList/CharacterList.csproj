@@ -13,11 +13,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AddCharacterPage.xaml.cs">
+      <DependentUpon>AddCharacterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="AddItemPage.xaml.cs">
       <DependentUpon>AddItemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="CharactersPage.xaml.cs">
+      <DependentUpon>CharactersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="EditItemPage.xaml.cs">
       <DependentUpon>EditItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ItemsPage.xaml.cs">
+      <DependentUpon>ItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CharactersPage.xaml.cs">
+      <DependentUpon>CharactersPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ItemDetailsPage.xaml.cs">
       <DependentUpon>ItemDetailsPage.xaml</DependentUpon>

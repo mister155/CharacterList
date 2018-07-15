@@ -5,8 +5,17 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="" x:Name="LblItem" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Item Type" HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="EntryItemType" />
+            <Entry x:Name="EntryItemName" Placeholder="Item name" />
+            <Picker x:Name="EntryItemType" Title="Item Type">
+                <Picker.Items>
+                    <x:String>Weapon</x:String>
+                    <x:String>Armor</x:String>
+                    <x:String>Item</x:String>
+                    <x:String>Other</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="EntrySpecialTraits" Placeholder="Special traits" />
+            <Entry x:Name="EntryDescription" Placeholder="Description" />
             <Button Text="Save changes" Clicked="Button_Clicked" />
             <Button Text="Delete" Clicked="Button_Clicked_1" />
         </StackLayout>

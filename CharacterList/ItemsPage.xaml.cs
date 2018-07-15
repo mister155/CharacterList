@@ -10,19 +10,19 @@ using Xamarin.Forms.Xaml;
 namespace CharacterList
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class StudentsPage : ContentPage
+	public partial class ItemsPage : ContentPage
 	{
-        private Class _class;
-		public StudentsPage(Class selectedClass)
+        private readonly Character _character;
+		public ItemsPage(Character selectedCharacter)
 		{
-            _class = selectedClass;
+            _character = selectedCharacter;
 			InitializeComponent ();
 		}
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            LvItems.ItemsSource = await App.LocalDb.GetStudentsByClassId(_class.Id);
+            LvItems.ItemsSource = await App.LocalDb.GetItemsByClassId(_character.Id);
             LvItems.ItemTapped -= LvItems_ItemTapped;
             LvItems.ItemTapped += LvItems_ItemTapped;
         }
@@ -35,7 +35,7 @@ namespace CharacterList
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddItemPage(_class));
+            await Navigation.PushAsync(new AddItemPage(_character));
         }
     }
 }
