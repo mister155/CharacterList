@@ -6,24 +6,23 @@
 
     <ScrollView>
         <StackLayout>
+            <Image Source="logo.jpg" Aspect="AspectFit"/>
+
             <Button
-            Text="Zobacz i dodaj postacie"
+            Text="Check and characters"
             Clicked="Button_Clicked"
-            Image="mobileicon.png"
-            ContentLayout="Top"
+            ContentLayout="Left"
          />
 
             <Button
-            Text="Lista postaci"
+            Text="Character list"
             Clicked="btnProperties_Clicked_1"
-            Image="mobileicon.png"
             ContentLayout="Left"
          />
 
             <Button
             Text="Share shit"
             Clicked="Button_Clicked_3"
-            Image="mobileicon.png"
          />
         </StackLayout>
     </ScrollView>

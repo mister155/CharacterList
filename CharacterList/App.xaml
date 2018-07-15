@@ -19,14 +19,6 @@
                 <Setter Property="BorderRadius" Value="0" />
                 <Setter Property="BorderWidth" Value="1" />
             </Style>
-          
-          <!-- 
-                        <Button ... Style="{StaticResource TestButtonStyle}" ... />
-
-          <AbsoluteLayout>
-            <Image Source="image.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
-          </AbsoluteLayout>
-          -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

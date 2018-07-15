@@ -6,7 +6,7 @@
         <StackLayout>
             <Label Text="Adding new class"
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="entryName" Placeholder="Nazwa klasy" />
+            <Entry x:Name="entryName" Placeholder="Character name" />
             <Button Text="Zapisz" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
